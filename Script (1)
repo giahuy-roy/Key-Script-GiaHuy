@@ -1,0 +1,117 @@
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
+ImageButton.Size = UDim2.new(0, 40, 0, 40)
+ImageButton.Draggable = true
+ImageButton.Image = "http://www.roblox.com/asset/?id=100663458322564"
+
+UICorner.CornerRadius = UDim.new(1, 10) 
+UICorner.Parent = ImageButton
+
+ImageButton.MouseButton1Down:Connect(function()
+    game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
+end)
+
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+repeat wait() until game:IsLoaded()
+local Window = Fluent:CreateWindow({
+    Title = "GiaHuy | Grow A Garden",
+    SubTitle = "Tham Gia Discord | https://discord.gg/kGTxhFdG",
+    TabWidth = 157,
+    Size = UDim2.fromOffset(550, 400),
+    Acrylic = true,
+    Theme = "Light",
+    MinimizeKey = Enum.KeyCode.End
+})
+local Tabs = {
+        Main0=Window:AddTab({ Title="Kênh Tui Nờ" }),
+        Main1=Window:AddTab({ Title="GiaHuy Script" }),
+        Main2=Window:AddTab({ Title="GiaHuy Fix Lag" }),
+}
+    Tabs.Main0:AddButton({
+    Title = "Discord",
+    Description = "Team",
+    Callback = function()
+        setclipboard("https://discord.gg/5K5kWCgd")
+    end
+})
+
+    Tabs.Main0:AddButton({
+    Title = "Youtobe",
+    Description = "@huygiasword",
+    Callback = function()
+        setclipboard("https://www.youtube.com/@huygiasword)
+    end
+})
+    Tabs.Main0:AddButton({
+    Title = "TikTok",
+    Description = "Team",
+    Callback = function()
+        setclipboard("tiktok.com/@giahuyswod")
+    end
+})
+
+Tabs.Main1:AddButton({
+    Title="Pet Free",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/namnnni2/Nam/refs/heads/main/Dupemanypet"))()
+  end
+})
+
+Tabs.Main1:AddButton({
+    Title="Vxeze",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/VxezeHubMain"))()
+  end
+})
+
+Tabs.Main1:AddButton({
+    Title="Mở Pet Xịn",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/gun-ns/scripts/main/script.lua"))()
+  end
+})
+
+Tabs.Main1:AddButton({
+    Title="Fake Egg",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/turkeyjhonny/GROW-A-GARDEN-HACKS/refs/heads/main/Salsalako"))()
+  end
+})
+
+Tabs.Main1:AddButton({
+    Title="Random Trái",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/mervsbsvsb/Grow-A-Garden/refs/heads/main/Script.lua"))()
+  end
+})
+
+Tabs.Main1:AddButton({
+    Title="Speed Hub",
+    Description="Nhân Bản Trái",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/BestScripters/GrowAGarden/refs/heads/main/Script"))()
+  end
+})
+
+Tabs.Main2:AddButton({
+    Title="Fix Lag",
+    Description="",
+    Callback=function()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
+  end
+})
+
